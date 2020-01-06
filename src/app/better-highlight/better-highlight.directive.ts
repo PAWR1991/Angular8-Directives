@@ -5,7 +5,7 @@ import { Directive, Renderer2, OnInit, ElementRef, HostListener, HostBinding, In
 })
 export class BetterHighlightDirective implements OnInit {
   @Input() defaultColor: string = 'transparent';
-  @Input() highlightColor: string = 'blue';
+  @Input('appBetterHighlight') highlightColor: string = 'blue';
    //tell the DOM's element that has been binded to appBetterHighlight , to access the the Style - backgroundColor property
    @HostBinding('style.backgroundColor') backgroundColor: string = 'transparent';
   //renderer is better to used for DOM manipulation because the element not exist. Thus if you used grab
